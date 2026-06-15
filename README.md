@@ -1,3 +1,7 @@
+
+System: PRISMA DASHBOARD BUILDER  versão 1.0  Date:14-jun-2026 
+Iraê César Brandão - Desenvolvedor Luck Way Informática
+Link: https://irae-cesar-brandao.github.io/prisma_dashboard_builder/
 <div class="box">
 <h2>1. Project</h2>
 <p>This section defines the main information of the systematic review.</p>
