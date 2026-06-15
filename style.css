@@ -1,0 +1,246 @@
+/* =========================
+   BASE
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #123d7a;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+/* =========================
+   LAYOUT PRINCIPAL
+========================= */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* inputs e botões */
+input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+button {
+  padding: 10px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+/* =========================
+   BOXES SIMPLES
+========================= */
+.box {
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+}
+
+.blue { background: #eef5ff; }
+.yellow { background: #fff9df; }
+.green { background: #eefbe9; }
+.purple { background: #f2ecff; }
+
+/* =========================
+   PRISMA DASHBOARD
+========================= */
+.prisma-dashboard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* HEADER DO PRISMA */
+.prisma-header {
+  background: #fce5cd;
+  border-left: 8px solid #e69138;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+
+.prisma-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 22px;
+}
+
+.prisma-header p {
+  margin: 4px 0;
+}
+
+/* =========================
+   FASES
+========================= */
+.phase {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+.phase h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* cores por fase */
+.identification { border-top: 5px solid #1976d2; }
+.screening      { border-top: 5px solid #f9a825; }
+.eligibility    { border-top: 5px solid #43a047; }
+.included       { border-top: 5px solid #7b1fa2; }
+
+/* =========================
+   PRISMA BOX
+========================= */
+.prisma-box {
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 12px;
+}
+
+.prisma-box h3 {
+  margin-top: 0;
+  font-size: 15px;
+}
+
+/* linha de valores */
+.line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.total {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* setas */
+.arrow {
+  text-align: center;
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+/* resultado final */
+.final {
+  background: #e8f5e9;
+  border: 2px solid #4caf50;
+}
+
+/* destaque total */
+.highlight-total {
+  background: #dbeeff;
+  border: 1px solid #9ec5fe;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* =========================
+   FORMULÁRIOS
+========================= */
+.period-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.period-row input {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* =========================
+   PRINT / PDF (CRÍTICO)
+========================= */
+@media print {
+
+  body {
+    background: #fff;
+  }
+
+  /* evita quebra dentro dos blocos */
+  .phase,
+  .card,
+  .prisma-box {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* mantém cores no PDF */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* evita grid quebrar o layout no PDF */
+  .container {
+    display: block !important;
+  }
+
+  /* melhora exportação do dashboard */
+  .prisma-dashboard {
+    display: block;
+  }
+}
+
+/* =====================================
+   EXPORT AREA (SE VOCÊ USAR html2pdf)
+======================================= */
+#export-area {
+  width: 100%;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+
+#dashboard {
+  display: block !important;
+  width: 100% !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* =====================================
+   TUTORIAL
+======================================= */
+.tutorial {
+    display: none;
+}
+
+.tutorial.active {
+    display: block;
+}

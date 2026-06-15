@@ -1,0 +1,30 @@
+{
+  "title": "Systematic Review Example",
+  "databases": [
+    {
+      "name": "Google Scholar",
+      "count": 320
+    },
+    {
+      "name": "Scopus",
+      "count": 180
+    },
+    {
+      "name": "Web of Science",
+      "count": 140
+    },
+    {
+      "name": "SciELO",
+      "count": 70
+    },
+    {
+      "name": "ResearchGate",
+      "count": 60
+    }
+  ],
+  "duplicates": 125,
+  "outsideTime": 45,
+  "notRelated": 220,
+  "screeningExcluded": 260,
+  "eligibilityExcluded": 85
+}
